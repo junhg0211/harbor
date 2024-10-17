@@ -3,12 +3,22 @@
 	import Navigation from './Navigation.svelte';
 
 	export let selected;
+
+	const scrollToBottom = (node) => {
+		const scroll = () =>
+			node.scroll({
+				top: node.scrollHeight
+			});
+		scroll();
+
+		return { update: scroll };
+	};
 </script>
 
 <div class="ancient-container">
 	<div class="main-container">
 		<Navigation {selected} />
-		<div class="article">
+		<div class="article" use:scrollToBottom={this}>
 			<slot></slot>
 		</div>
 	</div>

@@ -29,6 +29,7 @@
 		shares="10"
 		likes="10"
 		images={['/example/author.png']}
+		publicRange="4"
 	>
 		with medias!
 	</Post>
@@ -39,6 +40,7 @@
 		shares="10"
 		likes="10"
 		images={['/example/author.png', '/example/author.png']}
+		publicRange="3"
 	>
 		with medias!
 	</Post>
@@ -49,6 +51,7 @@
 		shares="10"
 		likes="10"
 		images={['/example/author.png', '/example/author.png', '/example/author.png']}
+		publicRange="2"
 	>
 		with medias!
 	</Post>
@@ -64,6 +67,7 @@
 			'/example/author.png',
 			'/example/author.png'
 		]}
+		publicRange="1"
 	>
 		with medias!
 	</Post>
