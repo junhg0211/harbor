@@ -1,0 +1,119 @@
+<script lang="ts">
+	import Page from '../../Page.svelte';
+	import Post from '../../Post.svelte';
+</script>
+
+<Page selected="home">
+	<Post
+		authorName="Post Author"
+		authorHandle="@post.author · 3 hours"
+		replys="0"
+		shares="0"
+		likes="0"
+	>
+		Hello, world!
+	</Post>
+	<Post
+		authorName="Another Author"
+		authorHandle="@another.author · 3 hours"
+		replys="10"
+		shares="10"
+		likes="10"
+	>
+		Longer post with some<br />linebreaks
+	</Post>
+	<Post
+		authorName="Another Author"
+		authorHandle="@another.author · 3 hours"
+		replys="10"
+		shares="10"
+		likes="10"
+		images={['/example/author.png']}
+	>
+		with medias!
+	</Post>
+	<Post
+		authorName="Another Author"
+		authorHandle="@another.author · 3 hours"
+		replys="10"
+		shares="10"
+		likes="10"
+		images={['/example/author.png', '/example/author.png']}
+	>
+		with medias!
+	</Post>
+	<Post
+		authorName="Another Author"
+		authorHandle="@another.author · 3 hours"
+		replys="10"
+		shares="10"
+		likes="10"
+		images={['/example/author.png', '/example/author.png', '/example/author.png']}
+	>
+		with medias!
+	</Post>
+	<Post
+		authorName="Another Author"
+		authorHandle="@another.author · 3 hours"
+		replys="10"
+		shares="10"
+		likes="10"
+		images={[
+			'/example/author.png',
+			'/example/author.png',
+			'/example/author.png',
+			'/example/author.png'
+		]}
+	>
+		with medias!
+	</Post>
+	<Post
+		authorName="Another Author"
+		authorHandle="@another.author · 3 hours"
+		replys="10"
+		shares="10"
+		likes="10"
+	>
+		This<br />
+		is<br />
+		very<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		long<br />
+		post
+	</Post>
+</Page>
