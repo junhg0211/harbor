@@ -35,7 +35,7 @@
 	}
 
 	.article {
-		margin-top: 32px;
+		padding-top: 32px;
 		flex: 1;
 		overflow: scroll;
 		padding-left: 12px;
