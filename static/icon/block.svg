@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="레이어_1" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <path d="M225.688,303.241c22.973,15.143,29.321,46.043,14.178,69.016h0c-15.143,22.973-46.043,29.321-69.016,14.178l-75.394-49.697c-22.973-15.143-29.321-46.043-14.178-69.016h0c15.143-22.973,46.043-29.321,69.016-14.178" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="30"/>
+  <path d="M326.908,271.574c-2.362-27.414,17.947-51.551,45.36-53.913h0c27.414-2.362,51.551,17.947,53.913,45.36l7.751,89.967c2.362,27.414-17.947,51.551-45.36,53.913h0c-27.414,2.362-51.551-17.947-53.913-45.36" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="30"/>
+  <line x1="160.572" y1="124.736" x2="182.507" y2="155.21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="30"/>
+  <line x1="253.584" y1="100.08" x2="253.584" y2="137.628" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="30"/>
+  <line x1="345.504" y1="121.388" x2="321.069" y2="149.897" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="30"/>
+</svg>

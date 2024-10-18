@@ -20,6 +20,9 @@
 		> . What is this?
 	</Post>
 	<div class="horizontal-line"></div>
+	<Post>This is anchoring post</Post>
+	<Post>This is anchoring post</Post>
+	<Post>This is anchoring post</Post>
 </Page>
 
 <style>

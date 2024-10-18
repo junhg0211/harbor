@@ -7,6 +7,12 @@
 <div class="navigation">
 	<NavigationRow icon="/icon.svg" label="Home" href="/home" selected={selected === 'home'} />
 	<NavigationRow
+		icon="/icon/globe.svg"
+		label="Search"
+		href="/search"
+		selected={selected === 'search'}
+	/>
+	<NavigationRow
 		icon="/icon/profile.svg"
 		label="Profile"
 		href="/profile"
@@ -29,7 +35,7 @@
 <style>
 	.navigation {
 		padding-top: 36px;
-		padding-left: 36px;
+		padding-left: 12px;
 		min-width: 240px;
 	}
 

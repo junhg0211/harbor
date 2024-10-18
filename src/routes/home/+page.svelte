@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Page from '../../Page.svelte';
 	import Post from '../../Post.svelte';
+	import Link from '../../Link.svelte';
 </script>
 
 <Page selected="home">
@@ -39,7 +40,7 @@
 		replys="10"
 		shares="10"
 		likes="10"
-		images={['/example/author.png', '/example/author.png']}
+		images={['/example/author.png', '/icon/globe.svg']}
 		publicRange="3"
 	>
 		with medias!
@@ -118,6 +119,6 @@
 		long<br />
 		long<br />
 		long<br />
-		post
+		post with a <Link>#hashtag</Link>
 	</Post>
 </Page>

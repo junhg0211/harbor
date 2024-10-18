@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import Media from './Media.svelte';
 
 	export let authorName;
 	export let authorHandle;
@@ -30,32 +31,32 @@
 		</div>
 		{#if images.length == 1}
 			<div class="images1">
-				<img src={images[0]} />
+				<Media src={images[0]} place="11" />
 			</div>
 		{:else if images.length == 2}
 			<div class="images2">
-				<img src={images[0]} />
-				<img src={images[1]} />
+				<Media src={images[0]} place="21" />
+				<Media src={images[1]} place="22" />
 			</div>
 		{:else if images.length == 3}
 			<div class="images3">
 				<div class="images3-left">
-					<img src={images[0]} />
+					<Media src={images[0]} place="31" />
 				</div>
 				<div class="images3-right">
-					<img src={images[1]} />
-					<img src={images[2]} />
+					<Media src={images[1]} place="32" />
+					<Media src={images[2]} place="33" />
 				</div>
 			</div>
 		{:else if images.length == 4}
 			<div class="images4">
 				<div class="images4-left">
-					<img src={images[0]} />
-					<img src={images[1]} />
+					<Media src={images[0]} place="41" />
+					<Media src={images[1]} place="42" />
 				</div>
 				<div class="images4-left">
-					<img src={images[2]} />
-					<img src={images[3]} />
+					<Media src={images[2]} place="43" />
+					<Media src={images[3]} place="44" />
 				</div>
 			</div>
 		{/if}
@@ -101,6 +102,7 @@
 		transition: background-color ease-in-out 100ms;
 		border-radius: 24px;
 		margin-bottom: 8px;
+		margin-top: 8px;
 	}
 
 	.author img {
@@ -124,25 +126,9 @@
 		cursor: pointer;
 	}
 
-	.images1 img,
-	.images2 img,
-	.images3 img,
-	.images4 img {
-		object-fit: cover;
-		border-radius: 12px;
-		cursor: pointer;
-	}
-	.images1 img {
-		height: 240px;
-		width: 100%;
-	}
 	.images2 {
 		display: flex;
 		gap: 2px;
-	}
-	.images2 img {
-		width: calc(50% - 1px);
-		height: 240px;
 	}
 	.images3 {
 		height: 240px;
@@ -152,19 +138,11 @@
 	.images3-left {
 		flex: 1;
 	}
-	.images3-left img {
-		width: 100%;
-		height: 240px;
-	}
 	.images3-right {
 		flex: 1;
 		display: flex;
 		flex-direction: column;
 		gap: 2px;
-	}
-	.images3-right img {
-		width: 100%;
-		height: calc(119px);
 	}
 	.images4 {
 		height: 240px;
@@ -176,9 +154,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 2px;
-	}
-	.images4-left img {
-		height: 118px;
 	}
 
 	.public-range {
@@ -199,6 +174,7 @@
 		border-radius: 1000px;
 		padding: 6px;
 		transition: background-color ease-in-out 100ms;
+		font-size: 14px;
 	}
 	.footer-icon-container:hover {
 		background-color: #eee;

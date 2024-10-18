@@ -30,7 +30,7 @@
 		display: flex;
 		max-width: 840px;
 		margin: auto;
-		gap: 36px;
+		gap: 24px;
 		flex-direction: row;
 	}
 
@@ -38,5 +38,7 @@
 		margin-top: 32px;
 		flex: 1;
 		overflow: scroll;
+		padding-left: 12px;
+		padding-bottom: 12px;
 	}
 </style>
