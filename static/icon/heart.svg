@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg id="a" data-name="레이어_1" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-  <path d="M256,430.762s-146.956-52.59-184.646-161.816c-37.69-109.226,11.434-187.707,80.409-187.707,88.794,0,104.237,67.385,104.237,93.044,0-25.659,15.581-93.044,105.169-93.044,69.592,0,119.155,78.481,81.128,187.707-38.027,109.226-186.297,161.816-186.297,161.816Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="30"/>
+  <path d="M256,430.762s-146.956-52.59-184.646-161.816c-37.69-109.226,17.434-187.707,91.937-187.707s92.709,75.095,92.709,75.095" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="30"/>
+  <path d="M256,430.762s146.956-52.59,184.646-161.816c37.69-109.226-17.434-187.707-91.937-187.707s-92.709,75.095-92.709,75.095" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="30"/>
 </svg>

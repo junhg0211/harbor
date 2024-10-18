@@ -15,9 +15,10 @@
 			<textarea placeholder="Hello, world!"></textarea>
 		</div>
 		<div class="setting">
-			<ActionListRow src="/icon/image.svg">Upload Media</ActionListRow>
-			<ActionListRow src="/icon/globe.svg">Accessible Range: Public</ActionListRow>
-			<ActionListRow src="/icon/calendar.svg">Schedule Post</ActionListRow>
+			<ActionListRow src="/icon/image.svg">Upload media</ActionListRow>
+			<ActionListRow src="/icon/globe.svg">Accessible range: Public</ActionListRow>
+			<ActionListRow src="/icon/share.svg">Is a share post: False</ActionListRow>
+			<ActionListRow src="/icon/calendar.svg">Schedule post</ActionListRow>
 		</div>
 		<div>
 			<button>Post</button>

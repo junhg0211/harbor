@@ -12,6 +12,7 @@
 		padding: 12px;
 		border-radius: 1000px;
 		transition: background-color ease-in-out 100ms;
+		cursor: pointer;
 	}
 
 	.row:hover {

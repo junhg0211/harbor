@@ -22,7 +22,7 @@
 			<span class="handle">{authorHandle}</span>
 		</div>
 		<div
-			class="content"
+			class={ignoreClick || 'content'}
 			on:click={function () {
 				if (!ignoreClick) goto('/post');
 			}}
@@ -52,10 +52,10 @@
 			<div class="images4">
 				<div class="images4-left">
 					<Media src={images[0]} place="41" />
-					<Media src={images[1]} place="42" />
+					<Media src={images[2]} place="43" />
 				</div>
 				<div class="images4-left">
-					<Media src={images[2]} place="43" />
+					<Media src={images[1]} place="42" />
 					<Media src={images[3]} place="44" />
 				</div>
 			</div>

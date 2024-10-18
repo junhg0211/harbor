@@ -13,8 +13,8 @@
 </script>
 
 <img {src} class="image-in-post i{place}" on:click={hoverImage} />
-<div class="hover" bind:this={hoverDiv}>
-	<img {src} on:click={removeHoverImage} />
+<div class="hover" bind:this={hoverDiv} on:click={removeHoverImage}>
+	<img {src} />
 </div>
 
 <style>
@@ -73,6 +73,5 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		cursor: pointer;
 	}
 </style>

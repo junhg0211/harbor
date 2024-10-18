@@ -48,6 +48,7 @@
 		<img src="/example/author.png" class="pfp" />
 		<div class="name">Author Name</div>
 		<div class="handle">@author.name</div>
+		<div class="bio">Hello, world! This is my bio.</div>
 		<div>Follows me</div>
 		<div>Joined at 2024. 10</div>
 	</div>
@@ -79,6 +80,11 @@
 	.handle {
 		color: grey;
 		margin-bottom: 12px;
+	}
+
+	.bio {
+		margin-top: 12px;
+		margin-bottom: 18px;
 	}
 
 	.settings {

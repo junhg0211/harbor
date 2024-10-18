@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="레이어_1" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect x="0" width="512" height="512" fill="#8e8e8e"/>
+  <g>
+    <circle cx="256" cy="158.619" r="41.735" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="30"/>
+    <line x1="256" y1="200.354" x2="256" y2="395.115" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="30"/>
+    <line x1="166.774" y1="269.175" x2="345.226" y2="269.175" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="30"/>
+    <path d="M423.228,325.847c-92.357,92.357-242.098,92.357-334.455,0" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="30"/>
+  </g>
+</svg>

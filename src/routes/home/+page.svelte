@@ -62,12 +62,7 @@
 		replys="10"
 		shares="10"
 		likes="10"
-		images={[
-			'/example/author.png',
-			'/example/author.png',
-			'/example/author.png',
-			'/example/author.png'
-		]}
+		images={['/icon/lock.svg', '/icon/reply.svg', '/icon/heart.svg', '/icon/settings.svg']}
 		publicRange="1"
 	>
 		with medias!
