@@ -2,39 +2,32 @@
 	import { goto } from '$app/navigation';
 	import Media from './Media.svelte';
 
-	export let authorName;
-	export let authorHandle;
-	export let replys;
-	export let likes;
-	export let shares;
-	export let src;
-	export let id;
-	export let publicRange = 0;
+	export let post;
 	export let images = [];
 	export let ignoreClick = false;
 </script>
 
 <div class="post">
 	<div class="author">
-		<img {src} class="author-pfp" on:click={() => goto(`/profile/${authorHandle}`)} />
+		<img src={post.pfp} class="author-pfp" on:click={() => goto(`/profile/${post.handle}`)} />
 	</div>
 	<div class="article">
 		<div class="head">
 			<span
 				class="author-name"
 				on:click={() => {
-					goto(`/profile/${authorHandle}`);
-				}}>{authorName}</span
+					goto(`/profile/${post.handle}`);
+				}}>{post.name}</span
 			>
-			<span class="handle">@{authorHandle}</span>
+			<span class="handle">@{post.handle}</span>
 		</div>
 		<div
-			class={ignoreClick || 'content'}
+			class="prewrap {ignoreClick || 'content'}"
 			on:click={function () {
-				if (!ignoreClick) goto(`/post/${id}`);
+				if (!ignoreClick) goto(`/post/${post.post_id}`);
 			}}
 		>
-			<slot></slot>
+			{post.content}
 		</div>
 		{#if images.length == 1}
 			<div class="images1">
@@ -67,32 +60,33 @@
 				</div>
 			</div>
 		{/if}
-		{#if publicRange !== 0}
+		{#if post.public_range !== 0}
 			<div class="public-range">
-				{#if publicRange === 1}
+				{#if post.public_range === 1}
 					<img src="/icon/login.svg" />
 					This post is accessible to logged-in users.
-				{:else if publicRange === 2}
+				{:else if post.public_range === 2}
 					<img src="/icon/profile.svg" />
 					This post is unaccessible to specific users.
-				{:else if publicRange === 3}
+				{:else if post.public_range === 3}
 					<img src="/icon/link.svg" />
 					This post is accessible to specific users.
-				{:else if publicRange >= 4}
+				{:else if post.public_range >= 4}
 					<img src="/icon/lock.svg" />
 					This post is private.
 				{/if}
 			</div>
 		{/if}
+		<div class="upload">{post.upload && new Date(post.upload).toLocaleString()}</div>
 		<div class="footer">
 			<div class="footer-icon-container">
-				<img src="/icon/reply.svg" /> <span>{replys}</span>
+				<img src="/icon/reply.svg" /> <span>{post.cache_replys}</span>
 			</div>
 			<div class="footer-icon-container">
-				<img src="/icon/share.svg" /> <span>{shares}</span>
+				<img src="/icon/share.svg" /> <span>{post.cache_shares}</span>
 			</div>
 			<div class="footer-icon-container">
-				<img src="/icon/heart.svg" /> <span>{likes}</span>
+				<img src="/icon/heart.svg" /> <span>{post.cache_likes}</span>
 			</div>
 			<div class="footer-icon-container">
 				<img src="/icon/list.svg" />
@@ -137,6 +131,10 @@
 		color: grey;
 	}
 
+	.prewrap {
+		white-space: pre-wrap;
+	}
+
 	.content {
 		cursor: pointer;
 	}
@@ -179,6 +177,11 @@
 	.public-range img {
 		height: 20px;
 		vertical-align: middle;
+	}
+
+	.upload {
+		color: grey;
+		font-size: 8px;
 	}
 
 	.footer {

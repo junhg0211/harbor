@@ -9,19 +9,7 @@
 
 <Page selected="">
 	<div class="title">Post</div>
-	<Post
-		authorName={post.name}
-		authorHandle={post.handle}
-		replys={post.cache_replys}
-		likes={post.cache_likes}
-		shares={post.cache_shares}
-		ignoreClick
-		publicRange={post.public_range}
-		src={post.pfp}
-		id={post.post_id}
-	>
-		{post.content}
-	</Post>
+	<Post {post} ignoreClick />
 	<div class="horizontal-line"></div>
 </Page>
 

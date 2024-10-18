@@ -8,9 +8,7 @@
 		<input placeholder="Query" />
 		<img src="/icon/globe.svg" />
 	</div>
-	<Post>Result posts</Post>
-	<Post>Result posts</Post>
-	<Post>Result posts</Post>
+	<Post post={{ content: 'search result' }} />
 </Page>
 
 <style>

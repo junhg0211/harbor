@@ -9,142 +9,88 @@
 
 <Page selected="home">
 	<Post
-		authorName="Post Author"
-		authorHandle="post.author · 3 hours"
-		replys="0"
-		shares="0"
-		likes="0"
-		src="/example/author.png"
-		id={0}
-	>
-		Hello, world!
-	</Post>
+		post={{
+			name: 'Post Author',
+			handle: 'post.author',
+			cache_replys: 0,
+			cache_shares: 0,
+			cache_likes: 0,
+			pfp: '/example/author.png',
+			post_id: 0,
+			content: 'Hello, wolrd!',
+			public_range: 0
+		}}
+	/>
 	<Post
-		authorName="Another Author"
-		authorHandle="another.author · 3 hours"
-		replys="10"
-		shares="10"
-		likes="10"
-		src="/example/author.png"
-		id={0}
-	>
-		Longer post with some<br />linebreaks
-	</Post>
+		post={{
+			name: 'Another Author',
+			handle: 'another.author',
+			cache_replys: 10,
+			cache_shares: 10,
+			cache_likes: 10,
+			pfp: '/example/author.png',
+			post_id: 0,
+			public_range: 0,
+			content: 'Longer post with some\nlinebreaks'
+		}}
+	></Post>
 	<Post
-		authorName="Another Author"
-		authorHandle="another.author · 3 hours"
-		replys="10"
-		shares="10"
-		likes="10"
+		post={{
+			name: 'Another Author',
+			handle: 'another.author',
+			cache_replys: 10,
+			cache_shares: 10,
+			cache_likes: 10,
+			public_range: 4,
+			pfp: '/example/author.png',
+			post_id: 0,
+			content: 'with medias!'
+		}}
 		images={['/example/author.png']}
-		publicRange={4}
-		src="/example/author.png"
-		id={0}
-	>
-		with medias!
-	</Post>
+	/>
 	<Post
-		authorName="Another Author"
-		authorHandle="another.author · 3 hours"
-		replys="10"
-		shares="10"
-		likes="10"
+		post={{
+			name: 'Another Author',
+			handle: 'another.author',
+			cache_replys: 10,
+			cache_shares: 10,
+			cache_likes: 10,
+			public_range: 3,
+			pfp: '/example/author.png',
+			post_id: 0,
+			content: 'with medias!'
+		}}
 		images={['/example/author.png', '/icon/globe.svg']}
-		publicRange={3}
-		src="/example/author.png"
-		id={0}
-	>
-		with medias!
-	</Post>
+	/>
 	<Post
-		authorName="Another Author"
-		authorHandle="another.author · 3 hours"
-		replys="10"
-		shares="10"
-		likes="10"
+		post={{
+			name: 'Another Author',
+			handle: 'another.author',
+			cache_replys: 10,
+			cache_shares: 10,
+			cache_likes: 10,
+			public_range: 2,
+			pfp: '/example/author.png',
+			post_id: 0,
+			content: 'with medias!'
+		}}
 		images={['/example/author.png', '/example/author.png', '/example/author.png']}
-		src="/example/author.png"
-		publicRange={2}
-		id={0}
-	>
-		with medias!
-	</Post>
+	/>
 	<Post
-		authorName="Another Author"
-		authorHandle="another.author · 3 hours"
-		src="/example/author.png"
-		replys="10"
-		shares="10"
-		likes="10"
+		post={{
+			name: 'Another Author',
+			handle: 'another.author',
+			cache_replys: 10,
+			cache_shares: 10,
+			cache_likes: 10,
+			public_range: 1,
+			pfp: '/example/author.png',
+			post_id: 0,
+			content: 'with medias!'
+		}}
 		images={['/icon/lock.svg', '/icon/reply.svg', '/icon/heart.svg', '/icon/settings.svg']}
-		publicRange={1}
-		id={0}
-	>
-		with medias!
-	</Post>
-	<Post
-		authorName="Another Author"
-		src="/example/author.png"
-		authorHandle="another.author · 3 hours"
-		replys="10"
-		shares="10"
-		likes="10"
-		id={0}
-	>
-		This<br />
-		is<br />
-		very<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		long<br />
-		post with a <Link>#hashtag</Link>
-	</Post>
+	/>
 	{#each posts as post}
-		<Post
-			authorName={post.name}
-			src={post.pfp}
-			authorHandle={post.handle}
-			replys={post.cache_replys}
-			likes={post.cache_likes}
-			shares={post.cache_shares}
-			id={post.post_id}
-			publicRange={post.public_range}
-		>
-			{post.content}
-		</Post>
+		<Post {post} />
 	{/each}
 </Page>

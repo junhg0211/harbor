@@ -6,7 +6,7 @@ export const GET: RequestHandler = async ({ params }) => {
 	const { id } = params;
 	const connection = await getConnection();
 	const [post]: [Array<any>, FieldPacket[]] = await connection.query(
-		'SELECT *, post.id AS post_id FROM post LEFT JOIN user ON user.id = post.author WHERE post.id = ?',
+		'SELECT *, post.id AS post_id FROM post LEFT JOIN user ON user.id = post.author WHERE post.id = ? AND NOT post.removed',
 		[id]
 	);
 

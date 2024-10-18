@@ -11,18 +11,7 @@
 <Page selected="profile">
 	<div>
 		{#each posts as post}
-			<Post
-				authorName={post.name}
-				authorHandle={post.handle}
-				replys={post.cache_replys}
-				likes={post.cache_likes}
-				shares={post.cache_shares}
-				publicRange={post.public_range}
-				src={post.pfp}
-				id={post.post_id}
-			>
-				{post.content}
-			</Post>
+			<Post {post} />
 		{/each}
 	</div>
 	<div class="pfp-container">
