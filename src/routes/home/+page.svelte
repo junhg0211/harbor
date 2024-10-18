@@ -15,6 +15,7 @@
 		shares="0"
 		likes="0"
 		src="/example/author.png"
+		id={0}
 	>
 		Hello, world!
 	</Post>
@@ -25,6 +26,7 @@
 		shares="10"
 		likes="10"
 		src="/example/author.png"
+		id={0}
 	>
 		Longer post with some<br />linebreaks
 	</Post>
@@ -37,6 +39,7 @@
 		images={['/example/author.png']}
 		publicRange={4}
 		src="/example/author.png"
+		id={0}
 	>
 		with medias!
 	</Post>
@@ -49,6 +52,7 @@
 		images={['/example/author.png', '/icon/globe.svg']}
 		publicRange={3}
 		src="/example/author.png"
+		id={0}
 	>
 		with medias!
 	</Post>
@@ -61,6 +65,7 @@
 		images={['/example/author.png', '/example/author.png', '/example/author.png']}
 		src="/example/author.png"
 		publicRange={2}
+		id={0}
 	>
 		with medias!
 	</Post>
@@ -73,6 +78,7 @@
 		likes="10"
 		images={['/icon/lock.svg', '/icon/reply.svg', '/icon/heart.svg', '/icon/settings.svg']}
 		publicRange={1}
+		id={0}
 	>
 		with medias!
 	</Post>
@@ -83,6 +89,7 @@
 		replys="10"
 		shares="10"
 		likes="10"
+		id={0}
 	>
 		This<br />
 		is<br />
@@ -135,6 +142,7 @@
 			likes={post.cache_likes}
 			shares={post.cache_shares}
 			id={post.post_id}
+			publicRange={post.public_range}
 		>
 			{post.content}
 		</Post>
