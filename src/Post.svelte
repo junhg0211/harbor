@@ -7,7 +7,7 @@
 	export let replys;
 	export let likes;
 	export let shares;
-	export let publicRange = '0';
+	export let publicRange = 0;
 	export let images = [];
 	export let ignoreClick = false;
 </script>
@@ -60,18 +60,18 @@
 				</div>
 			</div>
 		{/if}
-		{#if publicRange !== '0'}
+		{#if publicRange !== 0}
 			<div class="public-range">
-				{#if publicRange === '1'}
+				{#if publicRange === 1}
 					<img src="/icon/login.svg" />
 					This post is accessible to logged-in users.
-				{:else if publicRange === '2'}
+				{:else if publicRange === 2}
 					<img src="/icon/profile.svg" />
 					This post is unaccessible to specific users.
-				{:else if publicRange === '3'}
+				{:else if publicRange === 3}
 					<img src="/icon/link.svg" />
 					This post is accessible to specific users.
-				{:else if publicRange === '4'}
+				{:else if publicRange >= 4}
 					<img src="/icon/lock.svg" />
 					This post is private.
 				{/if}

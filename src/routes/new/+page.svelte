@@ -5,25 +5,27 @@
 </script>
 
 <Page selected="new">
-	<div class="container">
-		<div class="title">Write a new post</div>
-		<div class="anchor-container">
-			<Post>This is an anchored post!</Post>
+	<form action="/api/post/user/me.shtelo.org" method="POST">
+		<div class="container">
+			<div class="title">Write a new post</div>
+			<div class="anchor-container">
+				<Post>This is an anchored post!</Post>
+			</div>
+			<div class="textarea-container">
+				<img src="/example/author.png" class="author-pfp" />
+				<textarea id="content" name="content" placeholder="Hello, world!"></textarea>
+			</div>
+			<div class="setting">
+				<ActionListRow src="/icon/image.svg">Upload media</ActionListRow>
+				<ActionListRow src="/icon/globe.svg">Accessible range: Public</ActionListRow>
+				<ActionListRow src="/icon/share.svg">Is a share post: False</ActionListRow>
+				<ActionListRow src="/icon/calendar.svg">Schedule post</ActionListRow>
+			</div>
+			<div>
+				<button>Post</button>
+			</div>
 		</div>
-		<div class="textarea-container">
-			<img src="/example/author.png" class="author-pfp" />
-			<textarea placeholder="Hello, world!"></textarea>
-		</div>
-		<div class="setting">
-			<ActionListRow src="/icon/image.svg">Upload media</ActionListRow>
-			<ActionListRow src="/icon/globe.svg">Accessible range: Public</ActionListRow>
-			<ActionListRow src="/icon/share.svg">Is a share post: False</ActionListRow>
-			<ActionListRow src="/icon/calendar.svg">Schedule post</ActionListRow>
-		</div>
-		<div>
-			<button>Post</button>
-		</div>
-	</div>
+	</form>
 </Page>
 
 <style>

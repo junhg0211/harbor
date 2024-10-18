@@ -30,7 +30,7 @@
 		shares="10"
 		likes="10"
 		images={['/example/author.png']}
-		publicRange="4"
+		publicRange={4}
 	>
 		with medias!
 	</Post>
@@ -41,7 +41,7 @@
 		shares="10"
 		likes="10"
 		images={['/example/author.png', '/icon/globe.svg']}
-		publicRange="3"
+		publicRange={3}
 	>
 		with medias!
 	</Post>
@@ -52,7 +52,7 @@
 		shares="10"
 		likes="10"
 		images={['/example/author.png', '/example/author.png', '/example/author.png']}
-		publicRange="2"
+		publicRange={2}
 	>
 		with medias!
 	</Post>
@@ -63,7 +63,7 @@
 		shares="10"
 		likes="10"
 		images={['/icon/lock.svg', '/icon/reply.svg', '/icon/heart.svg', '/icon/settings.svg']}
-		publicRange="1"
+		publicRange={1}
 	>
 		with medias!
 	</Post>

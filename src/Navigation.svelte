@@ -15,7 +15,7 @@
 	<NavigationRow
 		icon="/icon/profile.svg"
 		label="Profile"
-		href="/profile"
+		href="/profile/me.shtelo.org"
 		selected={selected === 'profile'}
 	/>
 	<NavigationRow
