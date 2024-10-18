@@ -8,9 +8,11 @@
 	<form action="/api/post/user/me.shtelo.org" method="POST">
 		<div class="container">
 			<div class="title">Write a new post</div>
+			<!--
 			<div class="anchor-container">
 				<Post>This is an anchored post!</Post>
 			</div>
+      -->
 			<div class="textarea-container">
 				<img src="/example/author.png" class="author-pfp" />
 				<textarea id="content" name="content" placeholder="Hello, world!"></textarea>

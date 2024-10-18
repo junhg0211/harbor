@@ -20,7 +20,12 @@
 	</div>
 	<div class="article">
 		<div class="head">
-			<span class="author-name">{authorName}</span>
+			<span
+				class="author-name"
+				on:click={() => {
+					goto(`/profile/${authorHandle}`);
+				}}>{authorName}</span
+			>
 			<span class="handle">@{authorHandle}</span>
 		</div>
 		<div
@@ -122,6 +127,12 @@
 	.author-name {
 		font-weight: bold;
 	}
+
+	.author-name:hover {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
 	.handle {
 		color: grey;
 	}

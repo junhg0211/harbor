@@ -13,6 +13,12 @@
 		selected={selected === 'search'}
 	/>
 	<NavigationRow
+		icon="/icon/bell.svg"
+		label="Notifications"
+		href="/notifications"
+		selected={selected === 'notifications'}
+	/>
+	<NavigationRow
 		icon="/icon/profile.svg"
 		label="Profile"
 		href="/profile/me.shtelo.org"

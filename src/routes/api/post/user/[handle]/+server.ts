@@ -31,5 +31,5 @@ export const POST: RequestHandler = async ({ params, request }) => {
 		content
 	]);
 
-	return new Response('ok');
+	return redirect(303, '/');
 };
