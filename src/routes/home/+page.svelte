@@ -11,6 +11,7 @@
 		replys="0"
 		shares="0"
 		likes="0"
+		src="/example/author.png"
 	>
 		Hello, world!
 	</Post>
@@ -20,6 +21,7 @@
 		replys="10"
 		shares="10"
 		likes="10"
+		src="/example/author.png"
 	>
 		Longer post with some<br />linebreaks
 	</Post>
@@ -31,6 +33,7 @@
 		likes="10"
 		images={['/example/author.png']}
 		publicRange={4}
+		src="/example/author.png"
 	>
 		with medias!
 	</Post>
@@ -42,6 +45,7 @@
 		likes="10"
 		images={['/example/author.png', '/icon/globe.svg']}
 		publicRange={3}
+		src="/example/author.png"
 	>
 		with medias!
 	</Post>
@@ -52,6 +56,7 @@
 		shares="10"
 		likes="10"
 		images={['/example/author.png', '/example/author.png', '/example/author.png']}
+		src="/example/author.png"
 		publicRange={2}
 	>
 		with medias!
@@ -59,6 +64,7 @@
 	<Post
 		authorName="Another Author"
 		authorHandle="@another.author · 3 hours"
+		src="/example/author.png"
 		replys="10"
 		shares="10"
 		likes="10"
@@ -69,6 +75,7 @@
 	</Post>
 	<Post
 		authorName="Another Author"
+		src="/example/author.png"
 		authorHandle="@another.author · 3 hours"
 		replys="10"
 		shares="10"

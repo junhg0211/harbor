@@ -18,6 +18,8 @@
 				likes={post.cache_likes}
 				shares={post.cache_shares}
 				publicRange={post.public_range}
+				src={post.pfp}
+				id={post.post_id}
 			>
 				{post.content}
 			</Post>

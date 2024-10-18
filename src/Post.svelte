@@ -7,6 +7,8 @@
 	export let replys;
 	export let likes;
 	export let shares;
+	export let src;
+	export let id;
 	export let publicRange = 0;
 	export let images = [];
 	export let ignoreClick = false;
@@ -14,17 +16,17 @@
 
 <div class="post">
 	<div class="author">
-		<img src="/example/author.png" />
+		<img {src} class="author-pfp" on:click={() => goto(`/profile/${authorHandle}`)} />
 	</div>
 	<div class="article">
 		<div class="head">
 			<span class="author-name">{authorName}</span>
-			<span class="handle">{authorHandle}</span>
+			<span class="handle">@{authorHandle}</span>
 		</div>
 		<div
 			class={ignoreClick || 'content'}
 			on:click={function () {
-				if (!ignoreClick) goto('/post');
+				if (!ignoreClick) goto(`/post/${id}`);
 			}}
 		>
 			<slot></slot>
@@ -105,10 +107,12 @@
 		margin-top: 8px;
 	}
 
-	.author img {
+	.author-pfp {
 		height: 40px;
 		border-radius: 100px;
+		cursor: pointer;
 	}
+
 	.article {
 		flex: 1;
 		display: flex;
