@@ -9,7 +9,7 @@
 
 <div class="navigation-row {selected && 'navigation-row-selected'}" on:click={goto(href)}>
 	<img src={icon} />
-	<span>{label}</span>
+	<span class="navigation-label">{label}</span>
 </div>
 
 <style>
@@ -33,5 +33,19 @@
 	.navigation-row:hover {
 		background-color: #ddd;
 		cursor: pointer;
+	}
+
+	@media (max-width: 768px) {
+		.navigation-row {
+			max-width: 24px;
+		}
+
+		.navigation-row img {
+			padding-right: 0;
+		}
+
+		.navigation-label {
+			display: none;
+		}
 	}
 </style>

@@ -25,6 +25,12 @@
 		selected={selected === 'profile'}
 	/>
 	<NavigationRow
+		icon="/icon/login.svg"
+		label="Login"
+		href="/login"
+		selected={selected === 'login'}
+	/>
+	<NavigationRow
 		icon="/icon/settings.svg"
 		label="Settings"
 		href="/settings"
@@ -47,7 +53,8 @@
 
 	@media (max-width: 768px) {
 		.navigation {
-			display: none;
+			max-width: 56px;
+			min-width: 0;
 		}
 	}
 </style>

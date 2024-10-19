@@ -38,7 +38,6 @@
 		padding-top: 32px;
 		flex: 1;
 		overflow: scroll;
-		padding-left: 12px;
 		padding-bottom: 12px;
 	}
 </style>
