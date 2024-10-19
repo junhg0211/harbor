@@ -2,6 +2,33 @@
 	import Page from '../../Page.svelte';
 	import Post from '../../Post.svelte';
 	import ActionListRow from '../../ActionListRow.svelte';
+
+	let publicRangeSettingFloat;
+	let publicRangeLabel = 'Public';
+	let publicRangeIcon = '/icon/globe.svg';
+	let publicRangeInput;
+	function showAccessibleRange() {
+		publicRangeSettingFloat.style.display = 'block';
+	}
+	function setAccessibleRange(range) {
+		publicRangeInput.value = range;
+		publicRangeLabel = [
+			'Public',
+			'Login',
+			'Unaccessible Specified',
+			'Accessible Specified',
+			'Private'
+		][range];
+		publicRangeIcon = [
+			'/icon/globe.svg',
+			'/icon/login.svg',
+			'/icon/profile.svg',
+			'/icon/link.svg',
+			'/icon/lock.svg'
+		][range];
+
+		publicRangeSettingFloat.style.display = 'none';
+	}
 </script>
 
 <Page selected="new">
@@ -19,7 +46,33 @@
 			</div>
 			<div class="setting">
 				<ActionListRow src="/icon/image.svg">Upload media</ActionListRow>
-				<ActionListRow src="/icon/globe.svg">Accessible range: Public</ActionListRow>
+				<div class="setting-float" bind:this={publicRangeSettingFloat}>
+					<ActionListRow src="/icon/globe.svg" on:click={() => setAccessibleRange(0)}>
+						Public
+					</ActionListRow>
+					<ActionListRow src="/icon/login.svg" on:click={() => setAccessibleRange(1)}>
+						Login
+					</ActionListRow>
+					<ActionListRow src="/icon/profile.svg" on:click={() => setAccessibleRange(2)}>
+						Unaccessible Specified
+					</ActionListRow>
+					<ActionListRow src="/icon/link.svg" on:click={() => setAccessibleRange(3)}>
+						Accessible Specified
+					</ActionListRow>
+					<ActionListRow src="/icon/lock.svg" on:click={() => setAccessibleRange(4)}>
+						Private
+					</ActionListRow>
+					<input
+						type="number"
+						name="public_range"
+						value={0}
+						bind:this={publicRangeInput}
+						style="display: none;"
+					/>
+				</div>
+				<ActionListRow src={publicRangeIcon} on:click={showAccessibleRange}>
+					Accessible range: {publicRangeLabel}
+				</ActionListRow>
 				<ActionListRow src="/icon/share.svg">Is a share post: False</ActionListRow>
 				<ActionListRow src="/icon/calendar.svg">Schedule post</ActionListRow>
 			</div>
@@ -65,6 +118,15 @@
 		height: 120px;
 		font-size: 16px;
 		outline: none;
+	}
+
+	.setting-float {
+		display: none;
+		position: fixed;
+		background-color: white;
+		border-radius: 24px;
+		box-shadow: 0 0 5px #ddd;
+		padding: 8px;
 	}
 
 	button {

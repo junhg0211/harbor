@@ -29,11 +29,12 @@ export const POST: RequestHandler = async ({ params, request }) => {
 		content = '';
 	}
 
-	await connection.query('INSERT INTO post(author, upload, content) VALUES(?, ?, ?)', [
-		authorId,
-		new Date(),
-		content
-	]);
+	const publicRange = r.get('public_range');
+
+	await connection.query(
+		'INSERT INTO post(author, upload, content, public_range) VALUES(?, ?, ?, ?)',
+		[authorId, new Date(), content, publicRange]
+	);
 
 	return redirect(303, '/');
 };

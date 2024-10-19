@@ -1,9 +1,10 @@
 <script lang="ts">
 	export let src;
+	export let indent = 0;
 </script>
 
-<div class="row">
-	<img {src} class="row-icon" />
+<div class="row" on:click>
+	<img {src} style="padding-left: calc(24px * {indent});" class="row-icon" />
 	<span><slot></slot></span>
 </div>
 
